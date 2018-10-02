@@ -4,9 +4,10 @@
   "description": "A performance test between cluster and non-cluster mode",
   "main": "server.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=prod PORT=3000 MODE=cluster MODULE=express nodemon server.js",
-    "prod": "cross-env NODE_ENV=prod PORT=3000 MODE=cluster MODULE=express node server.js",
+    "cluster:dev": "cross-env NODE_ENV=dev PORT=3000 MODE=cluster nodemon server.js",
+    "cluster:prod": "cross-env NODE_ENV=prod PORT=3000 MODE=cluster node server.js",
+    "noncluster:dev": "cross-env NODE_ENV=dev PORT=3000 MODE=non-cluster nodemon server.js",
+    "noncluster:prod": "cross-env NODE_ENV=prod PORT=3000 MODE=non-cluster node server.js",
     "benchmark": "autocannon -c 100 -d 5 -p 10 127.0.0.1:3000"
   },
   "keywords": [
@@ -17,8 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
-    "fastify": "^1.12.1"
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "autocannon": "^3.0.1",
