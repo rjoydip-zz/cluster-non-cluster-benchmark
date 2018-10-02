@@ -5,7 +5,7 @@ A performance test between cluster and non-cluster mode.
 ## Installation
 
 ```
-$ git clone 
+$ git clone https://github.com/rjoydip/cluster-non-cluster-benchmark.git
 $ cd cluster-non-cluster-benchmark
 $ npm install
 $ npm run cluster:dev
@@ -35,11 +35,8 @@ Stat    2.5% 50%  97.5%  99%    Avg     Stdev    Max
 Latency 0 ms 0 ms 105 ms 121 ms 4.42 ms 22.51 ms 255.63 ms
 
 Stat      1%      2.5%    50%     97.5%   Avg     Stdev  Min
-
 Req/Sec   18655   18655   22783   23295   22113.6 1755.8 18641
-
 Bytes/Sec 4.07 MB 4.07 MB 4.97 MB 5.08 MB 4.82 MB 383 kB 4.06 MB
-
 
 Req/Bytes counts sampled once per second.
 
